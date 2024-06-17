@@ -8,24 +8,28 @@ pub fn search_substr(full_text: &str, search_text: &str, allow_overlap: bool) ->
         let end_range = index + search_text.len();
         let typed_start_range = index as i32;
         let typed_end_range = (index + search_text.len()) as i32;
-        let slice = &full_text[start_range..end_range];
+        let slice = if full_text.len() >= (index + search_text.len()) {
+            &full_text[index..(index + search_text.len())]
+        } else {
+            ""
+        };
 
         if !allow_overlap {
             is_overlap = values.iter().find(|el| {
 
-             if typed_start_range > el.0 && typed_start_range < el.1 && typed_end_range > el.1 {
+            if typed_start_range <= el.0 && typed_end_range >= el.1 {
+             true
+            } else if typed_start_range >= el.0 && typed_end_range <= el.1 {
+             true
+            } else if typed_start_range <= el.1 && typed_end_range >= el.1 {
                 true
-             } else if typed_start_range < el.0 && typed_end_range > el.0 && typed_end_range < el.1 {
-                 true
-             } else if typed_start_range < el.0 && typed_end_range > el.1 {
-                 true
-             } else if typed_start_range > el.0 && typed_start_range < el.1 {
-                 true
-             } else {
+            } else if typed_start_range <= el.0 && typed_end_range >= el.0 {
+                true
+            } else {
                 false
-             }
+            }
 
-            }).is_none();
+            }).is_some();
         }
 
         if slice == search_text && !is_overlap {
@@ -33,6 +37,8 @@ pub fn search_substr(full_text: &str, search_text: &str, allow_overlap: bool) ->
             values.push((index as i32, (index + search_text.len()) as i32))
         }
     }
+
+    println!("{}", result);
 
     result
 }
