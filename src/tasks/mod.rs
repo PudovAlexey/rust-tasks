@@ -5,3 +5,4 @@ pub mod two_sum;
 pub mod roman_numerals_encoder;
 pub mod highest_scoring_word;
 pub mod search_substr;
+pub mod is_valid_ip;
