@@ -4,8 +4,6 @@ pub fn search_substr(full_text: &str, search_text: &str, allow_overlap: bool) ->
 
     for index in 0..full_text.len() {
         let mut is_overlap = false;
-        let start_range = index;
-        let end_range = index + search_text.len();
         let typed_start_range = index as i32;
         let typed_end_range = (index + search_text.len()) as i32;
         let slice = if full_text.len() >= (index + search_text.len()) {
