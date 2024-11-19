@@ -1,19 +1,12 @@
 pub mod tasks;
 
-use tasks::{
-   // find_all_anagrams_in_string,
-   give_me_a_diamond::{self, give_me_a_diamond}, highest_scoring_word, is_valid_ip, make_linked_list, roman_numerals_encoder, search_substr::{self, search_substr}, two_sum, 
-   Merge_k_sorted_lists,
-   Next_smaller_number_with_the_same_digits,
-   dashatizeOdd,
-   bubble_sort,
-   insertion_sort,
-   quick_sort,
-   // ips_between
-   split_strings,
-};
+use tasks::{find_erimp, perimeter_of_squares_rectangle};
 
 fn main() {
+
+   // let result = find_erimp::find_erimp(50 as u32);
+
+   // println!("{:?}", result);
    // let search = search_substr("aabbaaaaaaaa", "aaa", false);
 
    // (4, 5), (5,6), (6, 7) 
@@ -30,9 +23,7 @@ fn main() {
 
    // ips_between::ips_between("170.0.0.0", "170.1.0.0");
 
-   let test = split_strings::split_strings("abcdefgt");
-
-   println!("{:?}", test);
+   let resule = perimeter_of_squares_rectangle::perimeter_of_squares_rectangle(7);
 
 
 }

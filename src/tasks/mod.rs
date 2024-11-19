@@ -16,3 +16,8 @@ pub mod quick_sort;
 pub mod ips_between;
 pub mod split_strings;
 pub mod stop_gninnipS_my_sdrow;
+pub mod Your_order_please;
+pub mod zeroes;
+pub mod break_camel_case;
+pub mod find_erimp;
+pub mod perimeter_of_squares_rectangle;
