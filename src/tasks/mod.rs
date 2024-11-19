@@ -21,3 +21,4 @@ pub mod zeroes;
 pub mod break_camel_case;
 pub mod find_erimp;
 pub mod perimeter_of_squares_rectangle;
+pub mod sum_intervals;

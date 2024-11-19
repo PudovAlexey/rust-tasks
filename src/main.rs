@@ -1,6 +1,6 @@
 pub mod tasks;
 
-use tasks::{find_erimp, perimeter_of_squares_rectangle};
+use tasks::{find_erimp, perimeter_of_squares_rectangle, sum_intervals};
 
 fn main() {
 
@@ -23,7 +23,9 @@ fn main() {
 
    // ips_between::ips_between("170.0.0.0", "170.1.0.0");
 
-   let resule = perimeter_of_squares_rectangle::perimeter_of_squares_rectangle(7);
+   let resule = sum_intervals::sum_intervals(&[(1, 4), (7, 10), (3, 5)]);
+
+   println!("{:?}", resule);
 
 
 }
