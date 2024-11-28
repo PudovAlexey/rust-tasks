@@ -22,3 +22,6 @@ pub mod break_camel_case;
 pub mod find_erimp;
 pub mod perimeter_of_squares_rectangle;
 pub mod sum_intervals;
+pub mod get_pins;
+pub mod matrix_determinant;
+pub mod last_digit;

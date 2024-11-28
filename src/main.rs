@@ -1,6 +1,6 @@
 pub mod tasks;
 
-use tasks::{find_erimp, perimeter_of_squares_rectangle, sum_intervals};
+use tasks::{find_erimp, get_pins, last_digit, matrix_determinant::determinant, perimeter_of_squares_rectangle, sum_intervals};
 
 fn main() {
 
@@ -23,9 +23,28 @@ fn main() {
 
    // ips_between::ips_between("170.0.0.0", "170.1.0.0");
 
-   let resule = sum_intervals::sum_intervals(&[(1, 4), (7, 10), (3, 5)]);
+   // let resule = sum_intervals::sum_intervals(&[(1, 4), (7, 10), (3, 5)]);
 
-   println!("{:?}", resule);
+   // println!("{:?}", resule);
+
+   // let get_pin_combinations = get_pins::get_pins("369");
+
+   // println!("combo {:?}", get_pin_combinations)
+
+   // let det = determinant(&[vec![2, 5, 3], vec![1, -2, -1], vec![1, 3, 4]]);
+
+   // let did = last_digit(vec![3, 4, 5]);
+   let param: Vec<u64> = vec![1, 2];
+
+   let test = last_digit::last_digit(&param);
+
+   println!("{}", test);
 
 
 }
+
+// let mtr = [
+//   [2, 5, 3],
+//   [1, -2, -1],
+//   [1, 3, 4],
+// ]
