@@ -25,3 +25,4 @@ pub mod sum_intervals;
 pub mod get_pins;
 pub mod matrix_determinant;
 pub mod last_digit;
+pub mod sudoku_encoder;

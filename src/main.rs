@@ -1,6 +1,6 @@
 pub mod tasks;
 
-use tasks::{find_erimp, get_pins, last_digit, matrix_determinant::determinant, perimeter_of_squares_rectangle, sum_intervals};
+use tasks::{find_erimp, get_pins, last_digit, matrix_determinant::determinant, perimeter_of_squares_rectangle, sudoku_encoder, sum_intervals};
 
 fn main() {
 
@@ -34,11 +34,27 @@ fn main() {
    // let det = determinant(&[vec![2, 5, 3], vec![1, -2, -1], vec![1, 3, 4]]);
 
    // let did = last_digit(vec![3, 4, 5]);
-   let param: Vec<u64> = vec![1, 2];
+   // let param: Vec<u64> = vec![1, 2];
 
-   let test = last_digit::last_digit(&param);
+   // let test = last_digit::last_digit(&param);
 
-   println!("{}", test);
+let mut puzzle: [[u8; 9]; 9] = [
+    [5, 3, 4, 6, 7, 8, 9, 1, 2],
+    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+    [9, 6, 1, 5, 3, 7, 2, 8, 4],
+    [2, 8, 7, 4, 1, 9, 6, 3, 5],
+    [3, 4, 5, 2, 8, 6, 1, 7, 9],
+];
+
+    let result = sudoku_encoder::sudoku(&mut puzzle);
+
+    println!("{:?}", result);
+
+   // println!("{}", test);
 
 
 }
