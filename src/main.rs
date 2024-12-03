@@ -1,6 +1,6 @@
 pub mod tasks;
 
-use tasks::{find_erimp, get_pins, last_digit, matrix_determinant::determinant, perimeter_of_squares_rectangle, sudoku_encoder, sum_intervals};
+use tasks::{find_erimp, get_pins, hamming_numbers::hamming, last_digit, matrix_determinant::determinant, perimeter_of_squares_rectangle, sudoku_encoder, sum_intervals};
 
 fn main() {
 
@@ -50,11 +50,13 @@ let mut puzzle: [[u8; 9]; 9] = [
     [3, 4, 5, 2, 8, 6, 1, 7, 9],
 ];
 
-    let result = sudoku_encoder::sudoku(&mut puzzle);
+    // let result = sudoku_encoder::sudoku(&mut puzzle);
 
-    println!("{:?}", result);
+    // println!("{:?}", result);
 
    // println!("{}", test);
+
+   let result = hamming(19);
 
 
 }

@@ -26,3 +26,4 @@ pub mod get_pins;
 pub mod matrix_determinant;
 pub mod last_digit;
 pub mod sudoku_encoder;
+pub mod hamming_numbers;
