@@ -6,6 +6,7 @@ use std::collections::HashMap;
 
 
 pub fn sudoku(puzzle: &mut [[u8; 9]; 9]) -> [[u8; 9]; 9] {
+
     enum ValidationVariants {
         Valid(bool),
         Invalid(u8)
