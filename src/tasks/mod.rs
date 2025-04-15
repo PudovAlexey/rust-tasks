@@ -28,3 +28,4 @@ pub mod last_digit;
 pub mod sudoku_encoder;
 pub mod hamming_numbers;
 pub mod tree_by_levels;
+pub mod builder_tower;
