@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 pub fn highest_scoring_word(input: &str) -> &str {
 let mut top_matcher = 0;
 let mut max_word = "";
@@ -25,3 +27,7 @@ let alphabet_vec: Vec<&str> = alphabet.split("").collect();
  max_word
 }
 
+pub struct WordsWithScore {
+    pub word: String,
+    pub score: i32,
+}

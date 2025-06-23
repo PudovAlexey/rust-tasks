@@ -29,3 +29,6 @@ pub mod sudoku_encoder;
 pub mod hamming_numbers;
 pub mod tree_by_levels;
 pub mod builder_tower;
+pub mod num_to_ipv4;
+pub mod Primes_in_numbers;
+pub mod pyramide_slide_down;
